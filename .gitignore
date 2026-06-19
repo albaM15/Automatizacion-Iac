@@ -1,7 +1,25 @@
-.terraform/
+# Estado de Terraform
 *.tfstate
-*.tfstate.*
-.terraform.lock.hcl
-.env
-__pycache__/
-*.pyc
+*.tfstate.backup
+*.tfstate.*.backup
+
+# Directorio de providers y módulos descargados
+.terraform/
+.terraform.lock.hcl   # opcional, algunos equipos sí lo versionan
+
+# Variables con valores reales
+*.tfvars
+!*.tfvars.example     # excepto los ejemplos
+
+# Archivos de override (uso local)
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Crash logs de Terraform
+crash.log
+crash.*.log
+
+# Zips de lambdas (si aplica en el futuro)
+*.zip
