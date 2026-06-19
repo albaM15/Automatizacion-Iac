@@ -1,9 +1,4 @@
-variable "aws_region" {
-  description = "AWS region"
-  type        = string
-}
-
-variable "environment" {
-  description = "Environment name (dev, ci, prod)"
+variable "name_prefix" {
+  description = "Prefix used for naming all Cognito resources (e.g. school-narvaez-dev)"
   type        = string
 }
