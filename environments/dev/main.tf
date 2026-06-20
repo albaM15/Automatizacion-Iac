@@ -13,4 +13,9 @@ module "iam" {
   source      = "../../modules/iam"
   name_prefix = local.name_prefix
 }
- 
+
+module "storage" {
+  source      = "../../modules/storage"
+  name_prefix = local.name_prefix
+  environment = var.environment
+}
